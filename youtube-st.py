@@ -16,7 +16,7 @@ def audince_sample(country):
         return 'Other'
 
 # load our data
-@st.cache_data
+@st.cache
 def load_data():
     df_agg = pd.read_csv('data/Aggregated_Metrics_By_Video.csv').iloc[1:,:]
     df_agg.columns = ['Video','Video title','Video publish time','Comments added','Shares','Dislikes','Likes',
